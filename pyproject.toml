@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "heclet-code"
+version = "0.1.0"
+description = "first"
+authors = ["jammerhost"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.31.0"  # Добавьте эту зависимость для работы с HTTP-запросами
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.4.0"  # Для тестирования
+requests-mock = "^1.11.0"  # Для мокинга HTTP-запросов в тестах
+flake8 = "^6.1.0"  # Для анализа качества кода
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
