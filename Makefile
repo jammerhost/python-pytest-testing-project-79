@@ -1,5 +1,3 @@
-.PHONY: build package-install test lint
-
 build:
 	poetry build
 
@@ -7,7 +5,8 @@ package-install:
 	pip install --user dist/*.whl
 
 test:
-	pytest --cov=heclet_code tests/
+	poetry run pytest
 
-lint:
-	flake8 heclet_code tests
+check:
+	poetry run flake8
+	poetry run mypy hexlet_code/
